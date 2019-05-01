@@ -7,6 +7,7 @@ import About from './About';
 import Cats from './Cats';
 import PageNotFound from './PageNotFound';
 import Header from './Header';
+import Cat from './Cat';
 
 import {Link, Route, Switch, Redirect} from 'react-router-dom';
 
@@ -34,11 +35,11 @@ function App() {
       {/* <About /> */}
           <Route path="/about" component={About}/>
 
-          <Redirect to="" />
-
+          
           <Route component={PageNotFound} />
 
         </Switch>
+        <Route path="/cats/:cat" component={Cat}/>
     </div>
   );
 }
